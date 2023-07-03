@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mcordovaTarea5.Plan">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="PLAN ALIMENTICIO" FontSize="20" HorizontalOptions="Center" TextColor="Blue" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Id" TextColor="Green" FontSize="12" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Nombre" TextColor="Green" FontSize="12" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Descripcion" TextColor="Green" FontSize="12" Grid.Row="0" Grid.Column="2" />
+                <Label Text="duracion" TextColor="Green" FontSize="12" Grid.Row="0" Grid.Column="3" />
+                <Label Text="Peso actual" TextColor="Green" FontSize="12" Grid.Row="0" Grid.Column="4" />
+                <Label Text="Fecha" TextColor="Green" FontSize="12" Grid.Row="0" Grid.Column="5" />
+                <Label Text="Estado" TextColor="Green" FontSize="12" Grid.Row="0" Grid.Column="6" />
+            </Grid>
+            <ListView x:Name="listaPlan">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding id_palim}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="0" />
+                                    <Label Text="{Binding nombre_palim}" TextColor="Black" FontSize="12" Grid.Row="0" Grid.Column="1" />
+                                    <Label Text="{Binding descripcion_palim}" TextColor="Black" FontSize="12" Grid.Row="0" Grid.Column="2" />
+                                    <Label Text="{Binding duracion_palim}" TextColor="Black" FontSize="12" Grid.Row="0" Grid.Column="3" />
+                                    <Label Text="{Binding pesoactual_palim}" TextColor="Black" FontSize="12" Grid.Row="0" Grid.Column="4" />
+                                    <Label Text="{Binding fecha_palim}" TextColor="Black" FontSize="12" Grid.Row="0" Grid.Column="5" />
+                                    <Label Text="{Binding estado_palim}" TextColor="Black" FontSize="12" Grid.Row="0" Grid.Column="6" />
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
